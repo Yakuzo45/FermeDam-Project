@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La Ferme de Dan{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <section id="presentation">
+            {% include 'Visitor/presentation.html.twig' %}
+        </section>
+
+        <section id="betes">
+            {% include 'Visitor/betes.html.twig' %}
+        </section>
+
+        <section id="products">
+            {% include 'Visitor/products.html.twig' %}
+        </section>
+
+        <section id="contact">
+            {% include 'Visitor/contact.html.twig' %}
+        </section>
+    </div>
+
+{% endblock %}
