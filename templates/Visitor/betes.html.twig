@@ -1,18 +1,23 @@
-<div class="row justify-content-center">
-    <div class="col-12 text-center">
-        <h1>Nos Bêtes</h1>
-    </div>
-    <div class="col-10">
+<div class="wrapper row3 bgded"  id="betes">
+    <main class="hoc container clear">
+        <!-- main body -->
+        <!-- ################################################################################################ -->
+        <div class="center btmspace-50 mb">
+            <h2 class="heading mt-4">Nos Bêtes</h2>
+            <p class="textBetes">Nos vaches charolaises profitent des pâturages nivernais d'avril à novembre, le reste de l'année elles sont à l'abri en stabulation sur aire paillée.
 
-        <p>Nos vaches charolaises profitent des pâturages nivernais d'avril à novembre, le reste de l'année elles sont à l'abri en stabulation sur aire paillée.
+                C'est à cette période que les mères mettent bas.De cette facon nous gardons la traçabilité du cheptel.
 
-        C'est à cette période que les mères mettent bas. De cette facon nous gardons la traçabilité du cheptel.
-
-        Nous choississons les meilleurs produits de 3 à 6 ans max pour vous proposer une qualité de viandes superieure et sans conservateure.</p>
-    </div>
-    {% for i in 1..7 %}
-        <div class="col-4">
-            <img src="{{ asset('build/images/bete')}}{{ i }}{{('.jpg') }}" class="img-fluid">
+                Nous choississons les meilleurs produits de 3 à 6 ans max pour vous proposer une qualité de viandes superieure et sans conservateure.</p>
         </div>
-    {% endfor %}
+        <div class="row justify-content-center">
+            {% for i in 1..7 %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+                    <img src="{{ asset('build/images/bete')}}{{ i }}{{('.jpg') }}" class="img-fluid"/>
+                </div>
+            {% endfor %}
+
+        </div>
+        <div class="clear"></div>
+    </main>
 </div>

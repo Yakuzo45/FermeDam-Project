@@ -2,30 +2,11 @@
 
 {% block title %}La Ferme de Dam{% endblock %}
 
+{% block intro %}
+    {% include 'Visitor/intro.html.twig' %}
+{% endblock %}
+
 {% block body %}
-
-    <div class="container-fluid">
-        <section id="presentation">
-            {% include 'Visitor/presentation.html.twig' %}
-        </section>
-
-        <hr>
-
-        <section id="betes">
-            {% include 'Visitor/betes.html.twig' %}
-        </section>
-
-        <hr>
-
-        <section id="products">
-            {% include 'Visitor/products.html.twig' %}
-        </section>
-
-        <hr>
-
-        <section id="contact">
-            {% include 'Visitor/contact.html.twig' %}
-        </section>
-    </div>
-
+    {% include 'Visitor/betes.html.twig' %}
+    {% include 'Visitor/products.html.twig' %}
 {% endblock %}
