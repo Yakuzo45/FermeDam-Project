@@ -87,8 +87,29 @@
 #testimonials div span strong{margin-bottom:5px;}
 #testimonials div span em{font-size:.8rem;}
 #testimonials div blockquote{display:block; position:relative; width:100%; margin:0; padding:0;}
-.btn-modal{
-  margin-top:-70px;
+.last{
+  margin-left:250px;
+}
+
+.text-red{
+  font-size:1.2em;
+  font-weight:bold;
+  color:#ff3e3e;
+}
+
+.firstP{
+  margin-top:-45px;
+}
+
+.headingWhite{
+  color:white;
+  text-shadow:black 0.1em 0.1em 0.3em;
+}
+
+.text-products{
+  color:white;
+  text-shadow:black 0.1em 0.1em 0.3em;
+  font-size:1.2em;
 }
 
 /* Logos
@@ -99,6 +120,30 @@
 #logos li img{opacity:.5;}
 #logos li:hover img{opacity:1;}
 
+/* Form
+--------------------------------------------------------------------------------------------------------------- */
+
+.headingContact{
+  margin-bottom:80px;
+}
+
+label{
+  font-size:1.2em;
+}
+
+.formEmail{
+  height:50px;
+  text-align:center;
+}
+
+.formObject{
+  height:50px;
+  text-align:center;
+}
+
+textarea.form-control {
+  height:200px;
+}
 
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
@@ -239,6 +284,19 @@ input:focus, textarea:focus, *:required:focus{border-color:#82A800;}
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#82A800; border-color:#82A800;}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+.buttonScrollTop{
+  position:fixed;
+  top:90%;
+  left:90%;
+  background-color:white;
+  color:#82A800;
+  font-size:1.2em;
+}
+.buttonScrollTop:hover {
+  background-color:#82A800;
+  color:white;
+  border-color:#82A800;
+}
 
 
 /* Rows */
@@ -249,7 +307,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#82A800;}
 .row5, .row5 a{color:#888888; background-color:#FFFFFF;}
 
 .coloured{color:#FFFFFF; background-color:#82A800;}
-
+.msg-flash{
+  font-size:1.2em;
+}
 
 /* Header */
 #header #logo a{color:white;}
@@ -353,10 +413,6 @@ table a, #comments a{background-color:inherit;}
 
   #copyright{}
   #copyright p:first-of-type{margin-bottom:10px;}
-}
-
-.imgintro{
-
 }
 
 @media screen and (max-width:750px){
