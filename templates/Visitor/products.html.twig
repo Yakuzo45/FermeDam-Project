@@ -1,69 +1,33 @@
 <div class="img-fluid bgded" id="produits" style="background-image:url({{ asset('build/images/bg_produits.jpg') }});">
     <section id="testimonials" class="hoc container clear mb-5">
         <div class="center btmspace-50">
-            <h2 class="heading">Nos Produits</h2>
-            <p class="text-danger">Nous ne travaillons que sur commande</p>
-            <p class="text-black-50">Voici nos colis pour la saison : {{ season.name }} </p>
+            <h2 class="heading headingWhite">Nos Produits</h2>
+            <p class="text-red">Nous ne travaillons que sur commande</p>
         </div>
-        {% for colis in colis[0:4] %}
-            {% if loop.index is odd %}
-                    <div class="one_half first mb-3">
-                        <div class="clear"><span><strong>Colis n°{{ loop.index }}</strong> / <em>{{ colis.price }} € le Kg</em><br>
-                            <em>({{ colis.weight }})</em></span>
-                            <blockquote class="mt-3">{{ colis.description }}</blockquote>
-                        </div>
-                    </div>
-                {% else %}
-                    <div class="one_half mb-3">
-                        <div class="clear"><span><strong>Colis n°{{ loop.index }}</strong> / <em>{{ colis.price }} € le Kg</em><br>
-                            <em>({{ colis.weight }})</em></span>
-                        <blockquote class="mt-3">{{ colis.description }}</blockquote>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-    </section>
-    {% if colis|length > 4 %}
-    <div class="row justify-content-center">
-        <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#ModalColis">Voir plus de colis pour cette saison</button>
-    </div>
-
-        <div class="modal fade" id="ModalColis" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Voici les autres colis de la saison : {{ season.name }}</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <hr>
-                        <div id="testimonials" class="hoc container clear">
-                        {% for colis in colis[0:] %}
-                            {% if loop.index is odd %}
-                                <div class="one_half first mb-3">
-                                    <div class="clear"><span><strong>Colis n°{{ loop.index }}</strong> / <em>{{ colis.price }} € le Kg</em><br>
-                                        <em>({{ colis.weight }})</em></span>
-                                        <blockquote>{{ colis.description }}</blockquote>
-                                    </div>
-                                </div>
-                            {% else %}
-                                <div class="one_half mb-3">
-                                    <div class="clear"><span><strong>Colis n°{{ loop.index }}</strong> / <em>{{ colis.price }} € le Kg</em><br>
-                                        <em>({{ colis.weight }})</em></span>
-                                        <blockquote>{{ colis.description }}</blockquote>
-                                    </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
-                    </div>
-                </div>
+        <div class="one_half first mb-4">
+            <div class="clear"><span><strong>Colis n°1</strong> / <em> 11,90 € le Kg</em><br>
+                            <em> (entre 15 et 20 kg)</em></span>
+                <blockquote class="mt-3">1/16 de la bête composée de : 1 côte de boeuf, steack,faux filet,2 rosbeefs, rumsteack, pot au feu, bourguignon, braisé</blockquote>
             </div>
         </div>
-    {% endif %}
+        <div class="one_half mb-4">
+            <div class="clear"><span><strong>Colis n°2</strong> / <em>13,50 € le Kg</em><br>
+                            <em>(10 kg sous vide)</em></span>
+                <blockquote class="mt-3">Composée de : entrecôte, steack, faux filet, rumsteack, 2 rosbeefs, pot au feu, bourguignon, braisé</blockquote>
+            </div>
+        </div>
+        <div class="one_half last">
+            <div class="clear"><span><strong>Colis n°3</strong> / <em>15,00 € le Kg</em><br>
+                            <em>(Caissette de viandes à griller de 5 ou 10 kg)</em></span>
+                <blockquote class="mt-3">Composée de : entrecôtes, steack, rumsteack, faux filet, rosbeef, viande haché</blockquote>
+            </div>
+        </div>
+    </section>
+    <div class="center btmspace-15">
+        <p class="text-products firstP"><strong>(Selon la saison, possibilité de saucisses de boeuf aux herbes, chipo, merguez,
+                chair à saucisses)</strong></p>
+        <p class="text-products"><strong>Nous ne sommes pas un magasin c'est pourquoi il faut un nombre de caissettes<br>
+                minimum pour ensuite réserver le laboratoire qui nous delivrera la date de la reception des
+                colis</strong></p>
+    </div>
 </div>

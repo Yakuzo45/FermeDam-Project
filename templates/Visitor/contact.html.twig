@@ -1,0 +1,23 @@
+<div class="wrapper row3 bgded"  id="contact">
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert msg-flash alert-{{ label }} text-center mt-3">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <div class="hoc container clear">
+        <div class="center btmspace-50">
+            <h2 class="heading headingContact">Contactez-nous !</h2>
+            {{ form_start(form) }}
+            {{ form_label(form.Email, 'Votre adresse e-mail :',{ 'label_attr': {'class' : 'mt-5 mb-2'} }) }}
+            {{ form_widget(form.Email) }}
+            {{ form_label(form.Object, 'Objet du message :' ,{ 'label_attr': {'class' : 'mt-5 mb-2'} }) }}
+            {{ form_widget(form.Object) }}
+            {{ form_label(form.Message, 'Message :',{ 'label_attr': {'class' : 'mt-5 mb-2'} }) }}
+            {{ form_widget(form.Message) }}
+            <button class="btn btn-success mt-4">{{ button_label|default('Envoyer le mail') }}</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
